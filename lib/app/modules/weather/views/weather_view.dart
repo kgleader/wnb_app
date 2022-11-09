@@ -13,7 +13,7 @@ class WeatherView extends GetView<WeatherController> {
         title: const Text('WeatherView'),
         centerTitle: true,
       ),
-      body: Center(
+      body: const Center(
         child: Text(
           'WeatherView is working',
           style: TextStyle(fontSize: 20),

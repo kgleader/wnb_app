@@ -1,6 +1,9 @@
+// ignore_for_file: unnecessary_overrides
+
 import 'package:get/get.dart';
 
 class WeatherController extends GetxController {
+  // ignore: todo
   //TODO: Implement WeatherController
 
   final count = 0.obs;
