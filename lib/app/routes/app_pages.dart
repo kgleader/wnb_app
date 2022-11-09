@@ -1,3 +1,5 @@
+// ignore_for_file: constant_identifier_names
+
 import 'package:get/get.dart';
 import '../modules/bmi/bindings/bmi_binding.dart';
 import '../modules/bmi/views/bmi_view.dart';
