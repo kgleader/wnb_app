@@ -1,3 +1,5 @@
+// ignore_for_file: constant_identifier_names
+
 import 'package:get/get.dart';
 import '../modules/bmi/bindings/bmi_binding.dart';
 import '../modules/bmi/views/bmi_view.dart';
@@ -11,8 +13,8 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  // ignore: constant_identifier_names
   static const INITIAL = Routes.NEWS;
+  static const WEATHER = Routes.WEATHER;
 
   static final routes = [
     GetPage(

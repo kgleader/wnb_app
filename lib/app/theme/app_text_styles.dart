@@ -22,4 +22,15 @@ class AppTextStyle {
     fontSize: 16,
     fontWeight: FontWeight.w400,
   );
+
+  static const body1 = TextStyle(
+    color: AppColors.white,
+    fontSize: 96,
+  );
+
+  static TextStyle body2(double size) => TextStyle(
+        color: AppColors.white,
+        fontSize: size,
+        fontWeight: FontWeight.w300,
+      );
 }

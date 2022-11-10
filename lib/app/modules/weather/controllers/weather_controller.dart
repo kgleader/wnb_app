@@ -1,26 +1,18 @@
-// ignore_for_file: unnecessary_overrides
-
 import 'package:get/get.dart';
+import '../../../data/models/weather_model.dart';
+import '../../../data/repositories/weather_repo.dart';
 
 class WeatherController extends GetxController {
-  // ignore: todo
-  //TODO: Implement WeatherController
+  Rx<Weather?> weather = Rxn();
+  final repo = WeatherRepo();
 
-  final count = 0.obs;
+  Future<void> getWeather() async {
+    weather.value = await repo.getWeather();
+  }
+
   @override
   void onInit() {
     super.onInit();
+    getWeather();
   }
-
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
 }
