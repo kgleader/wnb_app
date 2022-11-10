@@ -1,12 +1,12 @@
 import 'package:get/get.dart';
+import 'package:step_01/app/data/models/news_model.dart';
 import 'package:step_01/app/data/repositories/news_repo.dart';
-import '../../../data/models/news_model.dart';
 
 class NewsController extends GetxController {
   final newsRepo = NewsRepo();
   Rx<News?> news = Rxn();
 
-  final count = 0.obs;
+  final RxInt count = 0.obs;
 
   Future<void> getNews() async {
     news.value = await newsRepo.getNews();

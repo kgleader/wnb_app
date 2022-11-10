@@ -4,8 +4,8 @@ import '../../constants/api_const.dart';
 import '../models/news_model.dart';
 
 class NewsRepo {
-  //dio je http menen AppConst.newsApi ge baryp, datany alyp keluu
-  //kelgen datany News model dep beruu
+// dio je http menen AppConst.newsApi ge baryp data alyp keluu.
+// kelgen datany News modeline modeldep beruu
 
   final dio = Dio();
 

@@ -9,19 +9,20 @@ import '../controllers/weather_controller.dart';
 
 class WeatherView extends GetView<WeatherController> {
   const WeatherView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     final ctl = controller;
     return Scaffold(
       appBar: AppBar(
-        title: const Text('WeatherView'),
+        title: const Text('WearherView'),
         centerTitle: true,
       ),
       body: Container(
         width: double.infinity,
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/weather.jpg'),
+            image: AssetImage('assets/weather.jpeg'),
             fit: BoxFit.cover,
           ),
         ),
@@ -60,7 +61,8 @@ class WeatherView extends GetView<WeatherController> {
                       : const SizedBox(
                           height: 160,
                           width: 160,
-                          child: CircularProgressIndicator());
+                          child: CircularProgressIndicator(),
+                        );
                 }),
               ],
             ),
@@ -91,7 +93,7 @@ class WeatherView extends GetView<WeatherController> {
               child: FittedBox(
                 child: Obx(() {
                   final text = ctl.weather.value != null
-                      ? ctl.weather.value!.sys.country.replaceAll(' ', '\n')
+                      ? ctl.weather.value!.sys.country
                       : '...';
                   return Text(
                     text,

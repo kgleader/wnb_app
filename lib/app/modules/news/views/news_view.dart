@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+
 import 'package:get/get.dart';
 import 'package:step_01/app/routes/app_pages.dart';
+import 'package:step_01/app/theme/app_colors.dart';
+import 'package:step_01/app/utils/news_card.dart';
 
-import '../../../theme/app_colors.dart';
-import '../../../utils/news_card.dart';
 import '../controllers/news_controller.dart';
 
 class NewsView extends GetView<NewsController> {
@@ -18,15 +19,13 @@ class NewsView extends GetView<NewsController> {
         centerTitle: true,
         actions: [
           IconButton(
-              onPressed: () {
-                Get.toNamed(AppPages.WEATHER);
-              },
-              icon: const Icon(Icons.cloud)),
+            onPressed: () => Get.toNamed(AppPages.WEATHER),
+            icon: const Icon(Icons.cloud),
+          ),
         ],
       ),
       body: Center(
         child: Obx(() {
-          print(ctl.news.value.isBlank);
           if (ctl.news.value != null) {
             final news = ctl.news.value!;
             return ListView.builder(
@@ -39,6 +38,10 @@ class NewsView extends GetView<NewsController> {
             return const Center(child: CircularProgressIndicator());
           }
         }),
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () => Get.toNamed(AppPages.BMI),
+        label: const Text('Go BMI'),
       ),
     );
   }
