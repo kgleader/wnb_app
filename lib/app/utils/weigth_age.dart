@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:step_01/app/theme/app_colors.dart';
 
+import '../theme/app_colors.dart';
 import '../theme/app_text_styles.dart';
 
 class WeigthAge extends StatelessWidget {
@@ -22,7 +22,7 @@ class WeigthAge extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const SizedBox(height: 10),
+        const SizedBox(height: 2),
         Text(text, style: AppTextStyle.greyTextStyle),
         Text('$value', style: AppTextStyle.valueStyle),
         Row(
@@ -32,7 +32,7 @@ class WeigthAge extends StatelessWidget {
               iconData: Icons.remove,
               onPressed: () => remove(value - 1),
             ),
-            const SizedBox(width: 20),
+            const SizedBox(width: 5),
             RemoveAddButton(
               iconData: Icons.add,
               onPressed: () => add(value + 1),
@@ -58,7 +58,7 @@ class RemoveAddButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return FloatingActionButton(
       backgroundColor: AppColors.button2Color,
-      foregroundColor: AppColors.whiteText,
+      foregroundColor: AppColors.white,
       onPressed: onPressed,
       child: Icon(iconData, size: 40),
     );

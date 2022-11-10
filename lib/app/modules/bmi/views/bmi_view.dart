@@ -24,7 +24,7 @@ class BmiView extends GetView<BmiController> {
         title: const Text(AppText.appBarTitle, style: AppTextStyle.titleStyle),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(15.0),
+        padding: const EdgeInsets.all(10.0),
         child: Column(
           children: [
             Expanded(
@@ -42,7 +42,7 @@ class BmiView extends GetView<BmiController> {
                       }),
                     ),
                   ),
-                  const SizedBox(width: 20),
+                  const SizedBox(width: 10),
                   StatusCard(
                     child: InkWell(
                       onTap: ctl.isFemaleTrue,

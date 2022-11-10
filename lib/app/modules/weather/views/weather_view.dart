@@ -75,7 +75,7 @@ class WeatherView extends GetView<WeatherController> {
                     child: Obx(() {
                       final text = ctl.weather.value != null
                           ? ctl.weather.value!.weather[0].description
-                              .replaceAll(' ', '\n')
+                              .replaceAll('', '\n')
                           : '...';
                       return Text(
                         text,
