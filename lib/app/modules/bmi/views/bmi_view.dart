@@ -24,7 +24,7 @@ class BmiView extends GetView<BmiController> {
         title: const Text(AppText.appBarTitle, style: AppTextStyle.titleStyle),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(5.0),
         child: Column(
           children: [
             Expanded(
@@ -42,7 +42,7 @@ class BmiView extends GetView<BmiController> {
                       }),
                     ),
                   ),
-                  const SizedBox(width: 10),
+                  const SizedBox(width: 5),
                   StatusCard(
                     child: InkWell(
                       onTap: ctl.isFemaleTrue,
@@ -58,7 +58,7 @@ class BmiView extends GetView<BmiController> {
                 ],
               ),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 2),
             StatusCard(
               child: Obx(() {
                 return Heith(
@@ -67,7 +67,7 @@ class BmiView extends GetView<BmiController> {
                 );
               }),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 2),
             Expanded(
               child: Row(
                 children: [
@@ -81,7 +81,7 @@ class BmiView extends GetView<BmiController> {
                       );
                     }),
                   ),
-                  const SizedBox(width: 20),
+                  const SizedBox(width: 5),
                   StatusCard(
                     child: Obx(() {
                       return WeigthAge(
